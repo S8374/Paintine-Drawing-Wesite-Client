@@ -1,0 +1,125 @@
+/* General Container */
+.subcategory-container {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+}
+
+/* Slider */
+.slick-track {
+    display: flex;
+    gap: 20px;
+}
+
+.slick-slide {
+    transition: all 0.3s ease;
+}
+
+.image-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.1);
+}
+
+.links {
+    color: white;
+    text-transform: uppercase;
+}
+
+.details-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #ff5722;
+    color: white;
+
+
+    font-size: 1.1rem;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.details-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+/* Custom Arrows */
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: -32px;
+}
+
+.right-arrow {
+    right: -32px;
+}
+
+.custom-arrow:hover {
+    color: #ff5722;
+}
+
+/* Dots */
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #555;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #ff5722;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .image-box img {
+        height: 250px;
+    }
+
+    .details-button {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-box img {
+        height: 200px;
+    }
+
+    .custom-arrow {
+        font-size: 2rem; /* Reduced size for mobile */
+    }
+
+    .left-arrow {
+        left: -30px;
+    }
+
+    .right-arrow {
+        right: -30px;
+    }
+}

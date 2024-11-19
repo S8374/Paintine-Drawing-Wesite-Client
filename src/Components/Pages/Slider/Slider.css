@@ -1,0 +1,140 @@
+
+#app {
+    height: 100%;
+}
+  
+html, body {
+    position: relative;
+    height: 100%;
+}
+  
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Swiper container and slides */
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+  
+.swiper-slide {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Centered text overlay */
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    
+    font-weight: bold;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #03a9f4;
+    mix-blend-mode: overlay;
+    z-index: 5;
+}
+
+.text {
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: textSlideIn 1.5s ease-out forwards;
+}
+
+/* Smooth text animation */
+@keyframes textSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.text h2, .text h3 {
+    color: black;
+    text-transform: uppercase;
+}
+
+.text h2 {
+    font-size: 3.5em;
+    font-weight: 800;
+    line-height: 1em;
+    font-family: "Caveat", cursive;
+}
+
+.text h3 {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+.text p {
+    font-size: 1.7em;
+    color: black;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+    
+}
+
+.text a {
+    display: inline-block;
+    font-size: 1em;
+    background: #f15f26;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    color: #111;
+    letter-spacing: 2px;
+    transition: letter-spacing 0.2s;
+    cursor: pointer;
+}
+
+.text a:hover {
+    letter-spacing: 6px;
+}
+
+@media (max-width: 991px) {
+    .text h2 {
+        font-size: 2.5em;
+    }
+    .text h3 {
+        font-size: 1.8em;
+    }
+}

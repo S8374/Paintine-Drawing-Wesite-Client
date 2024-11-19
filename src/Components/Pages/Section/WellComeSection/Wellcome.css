@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+/* Text Styling */
+.well-text {
+    font-family: "Caveat", cursive;
+    line-height: 1.5;
+}
+
+/* Button Styling */
+.findMore a,
+.exploreMore a {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    transition: background 0.3s, transform 0.2s;
+    border-radius: 4px;
+}
+
+.findMore a {
+    background: #f15f26;
+    color: #fff;
+}
+
+.exploreMore a {
+    background: #ffda48;
+    color: #fff;
+}
+
+.findMore a:hover,
+.exploreMore a:hover {
+    transform: scale(1.05);
+}
+
+/* Image Responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .well-text {
+        font-size: 1rem;
+    }
+
+    .findMore a,
+    .exploreMore a {
+        padding: 8px 20px;
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .well-text {
+        font-size: 1.25rem;
+    }
+
+    .findMore a,
+    .exploreMore a {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
